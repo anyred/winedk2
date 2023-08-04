@@ -6,7 +6,10 @@ __pycache__/
 tags/
 .vscode/
 .vs
-Env/
+Env/cygwin64
+Env/Python311
+Env/qemu
+Env/Tools
 /*/Win/*/x64
 /*/Win/*/Release
 /*/Win/*/Debug
