@@ -185,3 +185,18 @@ $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p U
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc -t VS2019 -a X64 -b DEBUG
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc -t VS2019 -a IA32 -b RELEASE
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+
+libc\AppPkg\AppPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\AppPkg\AppPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\AppPkg\AppPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\AppPkg\AppPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\AppPkg\AppPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+
+
+libc\StdLib\StdLib.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\StdLib\StdLib.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\StdLib\StdLib.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\StdLib\StdLib.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p libc\StdLib\StdLib.dsc -t VS2019 -a IA32 -b DEBUG
