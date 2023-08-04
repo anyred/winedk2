@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <EDK2_ROOT>$(SolutionDir)</EDK2_ROOT>
+    <EDK2_INC>$(EDK2_ROOT)MdePkg\Include\;$(EDK2_ROOT)MdeModulePkg\Include;</EDK2_INC>
+    <EDK2_MDEPKG>$(EDK2_ROOT)MdePkg\</EDK2_MDEPKG>
+    <EDK2_BASETOOLS>$(EDK2_ROOT)BaseTools\</EDK2_BASETOOLS>
+    <EDK2_CONF>$(EDK2_ROOT)Conf\</EDK2_CONF>
+    <EDK2_BASETOOLS_BIN>$(EDK2_BASETOOLS)Bin\</EDK2_BASETOOLS_BIN>
+    <EDK2_WIN32_TOOLS>$(EDK2_BASETOOLS_BIN)Win32\</EDK2_WIN32_TOOLS>
+    <QEMU_ROOT>H:\qemu\</QEMU_ROOT>
+    <EDK2_EMULATOR_PKG>EmulatorPkg\</EDK2_EMULATOR_PKG>
+    <EDK2_EMULATOR_PKG_DSC>$(EDK2_EMULATOR_PKG)EmulatorPkg.dsc</EDK2_EMULATOR_PKG_DSC>
+    <EDK2_ARM>ArmPkg\</EDK2_ARM>
+    <EDK2_ARM_DSC>$(EDK2_ARM)ArmPkg.dsc</EDK2_ARM_DSC>
+    <EDK2_INC_X86>$(EDK2_INC);$(EDK2_ROOT)MdePkg\Include\IA32\</EDK2_INC_X86>
+    <EDK2_INC_X64>$(EDK2_INC);$(EDK2_ROOT)MdePkg\Include\X64\</EDK2_INC_X64>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NMakeIncludeSearchPath>
+    </NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="EDK2_ROOT">
+      <Value>$(EDK2_ROOT)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_INC">
+      <Value>$(EDK2_INC)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_MDEPKG">
+      <Value>$(EDK2_MDEPKG)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_BASETOOLS">
+      <Value>$(EDK2_BASETOOLS)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_CONF">
+      <Value>$(EDK2_CONF)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_BASETOOLS_BIN">
+      <Value>$(EDK2_BASETOOLS_BIN)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_WIN32_TOOLS">
+      <Value>$(EDK2_WIN32_TOOLS)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="QEMU_ROOT">
+      <Value>$(QEMU_ROOT)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_EMULATOR_PKG">
+      <Value>$(EDK2_EMULATOR_PKG)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_EMULATOR_PKG_DSC">
+      <Value>$(EDK2_EMULATOR_PKG_DSC)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_ARM">
+      <Value>$(EDK2_ARM)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_ARM_DSC">
+      <Value>$(EDK2_ARM_DSC)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_INC_X86">
+      <Value>$(EDK2_INC_X86)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="EDK2_INC_X64">
+      <Value>$(EDK2_INC_X64)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

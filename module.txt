@@ -1,0 +1,187 @@
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p [OvmfPkg\OvmfPkgIa32.dsc,....] -t VS2019 -a [X64,IA32] -b [DEBUG,RELEASE]
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p [OvmfPkg\OvmfPkgIa32.dsc,....] -t VS2019 -a [X64,IA32] -b [DEBUG,RELEASE]
+
+
+demo:
+remember add param [all clean]
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a IA32 -b DEBUG
+
+
+EmulatorPkg  [X64,IA32]
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a IA32 -b DEBUG
+
+ArmPkg      [ARM, AARCH64]
+ArmPkg\ArmPkg.dsc
+ArmPkg\Drivers\ArmCrashDumpDxe\ArmCrashDumpDxe.dsc
+ArmPlatformPkg\ArmPlatformPkg.dsc
+ArmVirtPkg\ArmVirtCloudHv.dsc
+ArmVirtPkg\ArmVirtKvmTool.dsc
+ArmVirtPkg\ArmVirtQemu.dsc
+ArmVirtPkg\ArmVirtQemuKernel.dsc
+ArmVirtPkg\ArmVirtXen.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ArmPkg\ArmPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ArmPkg\ArmPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ArmPkg\ArmPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ArmPkg\ArmPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+CryptoPkg   [IA32. X64]
+CryptoPkg\Test\CryptoPkgHostUnitTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p CryptoPkg\CryptoPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p CryptoPkg\CryptoPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p CryptoPkg\CryptoPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p CryptoPkg\CryptoPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+OvmfPkg     [IA32. X64]
+OvmfPkg\OvmfPkgIa32.dsc
+OvmfPkg\OvmfPkgIa32X64.dsc
+OvmfPkg\OvmfPkgX64.dsc
+OvmfPkg\OvmfXen.dsc
+OvmfPkg\AmdSev\AmdSevX64.dsc
+OvmfPkg\Bhyve\BhyveX64.dsc
+OvmfPkg\CloudHv\CloudHvX64.dsc
+OvmfPkg\IntelTdx\IntelTdxX64.dsc
+OvmfPkg\Microvm\MicrovmX64.dsc
+OvmfPkg\RiscVVirt\RiscVVirtQemu.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p OvmfPkg\OvmfPkgIa32X64.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p OvmfPkg\OvmfPkgIa32X64.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p OvmfPkg\OvmfPkgIa32X64.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p OvmfPkg\OvmfPkgIa32X64.dsc -t VS2019 -a IA32 -b DEBUG
+
+MdePkg\MdePkg.dsc       [IA32,  X64]
+MdePkg\Test\MdePkgHostTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdePkg\MdePkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdePkg\MdePkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdePkg\MdePkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdePkg\MdePkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+FatPkg\FatPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FatPkg\FatPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FatPkg\FatPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FatPkg\FatPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FatPkg\FatPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+DynamicTablesPkg\DynamicTablesPkg.dsc  [ARM AARCH64]
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p DynamicTablesPkg\DynamicTablesPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p DynamicTablesPkg\DynamicTablesPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p DynamicTablesPkg\DynamicTablesPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p DynamicTablesPkg\DynamicTablesPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+
+
+EmbeddedPkg\EmbeddedPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p EmbeddedPkg\EmbeddedPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p EmbeddedPkg\EmbeddedPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p EmbeddedPkg\EmbeddedPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p EmbeddedPkg\EmbeddedPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+
+FmpDevicePkg\FmpDevicePkg.dsc
+FmpDevicePkg\Test\FmpDeviceHostPkgTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FmpDevicePkg\FmpDevicePkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FmpDevicePkg\FmpDevicePkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FmpDevicePkg\FmpDevicePkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p FmpDevicePkg\FmpDevicePkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+IntelFsp2Pkg\IntelFsp2Pkg.dsc
+IntelFsp2Pkg\Tools\Tests\QemuFspPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2Pkg\IntelFsp2Pkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2Pkg\IntelFsp2Pkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2Pkg\IntelFsp2Pkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2Pkg\IntelFsp2Pkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+IntelFsp2WrapperPkg\IntelFsp2WrapperPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2WrapperPkg -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2WrapperPkg -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2WrapperPkg -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p IntelFsp2WrapperPkg -t VS2019 -a IA32 -b DEBUG
+
+MdeModulePkg\MdeModulePkg.dsc
+MdeModulePkg\Test\MdeModulePkgHostTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdeModulePkg\MdeModulePkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdeModulePkg\MdeModulePkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdeModulePkg\MdeModulePkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p MdeModulePkg\MdeModulePkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+
+NetworkPkg\NetworkPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p NetworkPkg\NetworkPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p NetworkPkg\NetworkPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p NetworkPkg\NetworkPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p NetworkPkg\NetworkPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+PcAtChipsetPkg\PcAtChipsetPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PcAtChipsetPkg\PcAtChipsetPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PcAtChipsetPkg\PcAtChipsetPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PcAtChipsetPkg\PcAtChipsetPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PcAtChipsetPkg\PcAtChipsetPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+PrmPkg\PrmPkg.dsc
+PrmPkg\Test\PrmPkgHostTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PrmPkg\PrmPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PrmPkg\PrmPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PrmPkg\PrmPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p PrmPkg\PrmPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+RedfishPkg\RedfishPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p RedfishPkg\RedfishPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p RedfishPkg\RedfishPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p RedfishPkg\RedfishPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p RedfishPkg\RedfishPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+
+SecurityPkg\SecurityPkg.dsc
+SecurityPkg\Test\SecurityPkgHostTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SecurityPkg\SecurityPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SecurityPkg\SecurityPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SecurityPkg\SecurityPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SecurityPkg\SecurityPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+ShellPkg\ShellPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShellPkg\ShellPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShellPkg\ShellPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShellPkg\ShellPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShellPkg\ShellPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+SignedCapsulePkg\SignedCapsulePkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SignedCapsulePkg\SignedCapsulePkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SignedCapsulePkg\SignedCapsulePkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SignedCapsulePkg\SignedCapsulePkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SignedCapsulePkg\SignedCapsulePkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+SourceLevelDebugPkg\SourceLevelDebugPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SourceLevelDebugPkg\SourceLevelDebugPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SourceLevelDebugPkg\SourceLevelDebugPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SourceLevelDebugPkg\SourceLevelDebugPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p SourceLevelDebugPkg\SourceLevelDebugPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+StandaloneMmPkg\StandaloneMmPkg.dsc  [X64]
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p StandaloneMmPkg\StandaloneMmPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p StandaloneMmPkg\StandaloneMmPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p StandaloneMmPkg\StandaloneMmPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p StandaloneMmPkg\StandaloneMmPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+UefiCpuPkg\UefiCpuPkg.dsc
+UefiCpuPkg\Test\UefiCpuPkgHostTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiCpuPkg\UefiCpuPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiCpuPkg\UefiCpuPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiCpuPkg\UefiCpuPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiCpuPkg\UefiCpuPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+UefiPayloadPkg\UefiPayloadPkg.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiPayloadPkg\UefiPayloadPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiPayloadPkg\UefiPayloadPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiPayloadPkg\UefiPayloadPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UefiPayloadPkg\UefiPayloadPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
+UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc
+UnitTestFrameworkPkg\Test\UnitTestFrameworkPkgHostTest.dsc
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p UnitTestFrameworkPkg\UnitTestFrameworkPkg.dsc -t VS2019 -a IA32 -b DEBUG

@@ -5,3 +5,10 @@ Build/
 __pycache__/
 tags/
 .vscode/
+.vs
+Env/
+/*/Win/*/x64
+/*/Win/*/Release
+/*/Win/*/Debug
+/*/Win/*/Debug
+
