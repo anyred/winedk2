@@ -1,0 +1,14 @@
+H:\winedk2\plugin\EDK2Helper\bin\Release\EDK2Helper.vsix
+H:\winedk2\plugin\EDK2Helper\bin\Release\extension.vsixmanifest
+H:\winedk2\plugin\EDK2Helper\obj\Release\_EmptyResource.resources
+H:\winedk2\plugin\EDK2Helper\obj\Release\EDK2Helper.csproj.GenerateResource.cache
+H:\winedk2\plugin\EDK2Helper\obj\Release\EDK2Helper.csproj.CoreCompileInputs.cache
+H:\winedk2\plugin\EDK2Helper\obj\Release\EDK2Helper.dll
+H:\winedk2\plugin\EDK2Helper\obj\Release\EDK2Helper.pdb
+H:\winedk2\plugin\EDK2Helper\obj\Release\extension.vsixmanifest
+H:\winedk2\plugin\EDK2Helper\obj\Release\files.json
+H:\winedk2\plugin\EDK2Helper\obj\Release\createTemplateManifests.cache
+H:\winedk2\plugin\EDK2Helper\bin\Release\languages.pkgdef
+H:\winedk2\plugin\EDK2Helper\obj\Release\EDK2Helper.csproj.AssemblyReference.cache
+H:\winedk2\plugin\EDK2Helper\bin\Release\Grammars\tl.tmLanguage
+H:\winedk2\plugin\EDK2Helper\bin\Release\Grammars\edk.tmLanguage

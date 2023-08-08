@@ -56,5 +56,9 @@
     <None Include="Build.bat">
       <Filter>源文件</Filter>
     </None>
+    <None Include="..\..\build.sh" />
+    <None Include="..\..\EmulatorPkg.dec" />
+    <None Include="..\..\EmulatorPkg.dsc" />
+    <None Include="..\..\EmulatorPkg.fdf" />
   </ItemGroup>
 </Project>

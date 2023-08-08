@@ -1,13 +1,21 @@
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p [OvmfPkg\OvmfPkgIa32.dsc,....] -t VS2019 -a [X64,IA32] -b [DEBUG,RELEASE]
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p [OvmfPkg\OvmfPkgIa32.dsc,....] -t VS2019 -a [X64,IA32] -b [DEBUG,RELEASE]
 
-
+ShieldPkg\ShieldPkg.dsc
 demo:
 remember add param [all clean]
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a X64 -b RELEASE
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a X64 -b DEBUG
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a IA32 -b RELEASE
 $(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p  -t VS2019 -a IA32 -b DEBUG
+
+
+ShieldPkg\ShieldPkg.dsc  [this is my Pkg]
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShieldPkg\ShieldPkg.dsc -t VS2019 -a X64 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShieldPkg\ShieldPkg.dsc -t VS2019 -a X64 -b DEBUG
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShieldPkg\ShieldPkg.dsc -t VS2019 -a IA32 -b RELEASE
+$(SolutionDir)edksetup.bat &&  $(SolutionDir)edksetup.bat rebuild  && build -p ShieldPkg\ShieldPkg.dsc -t VS2019 -a IA32 -b DEBUG
+
 
 
 EmulatorPkg  [X64,IA32]
